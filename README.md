@@ -1,34 +1,37 @@
 # Kotaroisme Theme Plugin
 
-A refined, typography-focused theme plugin for Obsidian with built-in customization settings.
+A refined, typography-focused theme plugin for Obsidian — built for long reading sessions and clean code aesthetics.
 
 ![Obsidian](https://img.shields.io/badge/Obsidian-v1.0.0+-7C3AED?logo=obsidian&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Philosophy
 
-Kotaroisme is designed with intentional typography choices:
+Good writing deserves good typography. Kotaroisme is designed around one principle: your notes should be a pleasure to read, not just a place to dump text.
 
-- **Readable body text** with generous line height and letter spacing
-- **Clear heading hierarchy** with a consistent scale
-- **Customizable accent color** throughout the interface
-- **Darcula-inspired syntax highlighting** for code blocks
-- **Light and dark theme support**
+- **Readable body text** with generous line height and letter spacing — optimized for long reading sessions
+- **Clear heading hierarchy** with a consistent, intentional scale
+- **Customizable accent color** applied consistently throughout the interface
+- **Darcula-inspired syntax highlighting** for code blocks that are easy on the eyes
+- **Full light and dark theme support** — looks great in any lighting condition
 
 ## Screenshots
 
-<!-- TODO: Add screenshots here -->
-<!-- ![Light Theme](screenshots/light.png) -->
-<!-- ![Dark Theme](screenshots/dark.png) -->
-<!-- ![Settings](screenshots/settings.png) -->
+### Dark Mode
+
+![Dark Theme](dark.png)
+
+### Light Mode
+
+![Light Theme](light.png)
 
 ## Features
 
-- Standalone plugin with built-in settings UI
-- No dependency on Style Settings plugin
-- Real-time preview when changing settings
-- Mobile-friendly design
-- Clean, minimal interface
+- **Standalone** — no dependency on the Style Settings plugin
+- **Built-in settings UI** — configure everything directly from Obsidian settings
+- **Real-time preview** — see changes instantly as you adjust sliders and colors
+- **Mobile-friendly** — works great on iOS and Android
+- **Clean, minimal interface** — gets out of the way so you can focus on your notes
 
 ## Settings
 
@@ -55,20 +58,20 @@ Kotaroisme is designed with intentional typography choices:
 **macOS / Linux:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USERNAME/kotaroisme-theme/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/kotaroisme/kotaroisme-theme/main/install.sh | bash
 ```
 
 With specific vault path:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USERNAME/kotaroisme-theme/main/install.sh | bash -s -- "/path/to/your/vault"
+curl -fsSL https://raw.githubusercontent.com/kotaroisme/kotaroisme-theme/main/install.sh | bash -s -- "/path/to/your/vault"
 ```
 
 **Windows (PowerShell):**
 
 ```powershell
 # Download files
-$repo = "USERNAME/kotaroisme-theme"
+$repo = "kotaroisme/kotaroisme-theme"
 $release = Invoke-RestMethod "https://api.github.com/repos/$repo/releases/latest"
 $version = $release.tag_name
 
@@ -86,7 +89,7 @@ Write-Host "Installed! Restart Obsidian and enable the plugin."
 
 ### Method 3: Manual Installation
 
-1. Go to the [Releases](https://github.com/USERNAME/kotaroisme-theme/releases) page
+1. Go to the [Releases](https://github.com/kotaroisme/kotaroisme-theme/releases) page
 2. Download `main.js` and `manifest.json` from the latest release
 3. Create folder: `<your-vault>/.obsidian/plugins/kotaroisme-theme/`
 4. Copy the downloaded files into that folder
@@ -100,7 +103,7 @@ If you have [BRAT](https://github.com/TfTHacker/obsidian42-brat) installed:
 
 1. Open Command Palette (Ctrl/Cmd + P)
 2. Run "BRAT: Add a beta plugin for testing"
-3. Enter: `USERNAME/kotaroisme-theme`
+3. Enter: `kotaroisme/kotaroisme-theme`
 4. Enable the plugin in Community Plugins
 
 ---
@@ -127,7 +130,7 @@ After installation:
 
 ```bash
 # Clone the repository
-git clone https://github.com/USERNAME/kotaroisme-theme.git
+git clone https://github.com/kotaroisme/kotaroisme-theme.git
 cd kotaroisme-theme
 
 # Install dependencies
@@ -238,6 +241,6 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## Support
 
-- 🐛 [Report a bug](https://github.com/USERNAME/kotaroisme-theme/issues)
-- 💡 [Request a feature](https://github.com/USERNAME/kotaroisme-theme/issues)
+- 🐛 [Report a bug](https://github.com/kotaroisme/kotaroisme-theme/issues)
+- 💡 [Request a feature](https://github.com/kotaroisme/kotaroisme-theme/issues)
 - ⭐ Star this repo if you find it useful!

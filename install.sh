@@ -2,9 +2,9 @@
 
 # ============================================================================
 # Kotaroisme Theme Installer for Obsidian
-# 
+#
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/USERNAME/kotaroisme-theme/main/install.sh | bash -s -- "/path/to/vault"
+#   curl -fsSL https://raw.githubusercontent.com/kotaroisme/kotaroisme-theme/main/install.sh | bash -s -- "/path/to/vault"
 #
 # Or download and run:
 #   chmod +x install.sh
@@ -21,7 +21,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 # GitHub repository info
-REPO="USERNAME/kotaroisme-theme"  # <- Ganti dengan username GitHub kamu
+REPO="kotaroisme/kotaroisme-theme"
 PLUGIN_ID="kotaroisme-theme"
 
 echo -e "${BLUE}"
@@ -41,7 +41,7 @@ VAULT_PATH="$1"
 if [ -z "$VAULT_PATH" ]; then
     echo -e "${YELLOW}No vault path provided.${NC}"
     echo ""
-    
+
     # Try common locations
     COMMON_PATHS=(
         "$HOME/Documents/Obsidian"
@@ -49,7 +49,7 @@ if [ -z "$VAULT_PATH" ]; then
         "$HOME/obsidian"
         "$HOME/Documents/obsidian"
     )
-    
+
     FOUND_VAULTS=()
     for path in "${COMMON_PATHS[@]}"; do
         if [ -d "$path" ]; then
@@ -59,7 +59,7 @@ if [ -z "$VAULT_PATH" ]; then
             done < <(find "$path" -maxdepth 2 -name ".obsidian" -type d -print0 2>/dev/null)
         fi
     done
-    
+
     if [ ${#FOUND_VAULTS[@]} -gt 0 ]; then
         echo -e "${GREEN}Found vault(s):${NC}"
         for i in "${!FOUND_VAULTS[@]}"; do
@@ -67,7 +67,7 @@ if [ -z "$VAULT_PATH" ]; then
         done
         echo ""
         read -p "Select vault number (or enter custom path): " selection
-        
+
         if [[ "$selection" =~ ^[0-9]+$ ]] && [ "$selection" -ge 1 ] && [ "$selection" -le ${#FOUND_VAULTS[@]} ]; then
             VAULT_PATH="${FOUND_VAULTS[$((selection-1))]}"
         else
