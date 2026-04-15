@@ -1,0 +1,1121 @@
+/* ============================================================================
+   KOTAROISME THEME - Plugin Version
+   Version: 2.0.1
+============================================================================ */
+
+body {
+    /* Accent */
+    --color-accent: #D7494C;
+    --accent-h: 359;
+    --accent-s: 64%;
+    --accent-l: 56%;
+
+    /* Typography - these can be overridden by plugin settings */
+    --font-text-size: 18px;
+    --line-height-normal: 1.8;
+    --letter-spacing-body: 0.042em;
+
+    --font-monospace-theme:
+            "Source Code Pro",
+            "JetBrains Mono",
+            ui-monospace,
+            "Cascadia Code",
+            Menlo,
+            Consolas,
+            "DejaVu Sans Mono",
+            monospace;
+
+    /* Heading Scale */
+    --h1-size: 36px;
+    --h1-line-height: 40px;
+    --h2-size: 30px;
+    --h2-line-height: 40px;
+    --h3-size: 24px;
+    --h3-line-height: 40px;
+    --h4-size: 18px;
+    --h4-line-height: 20px;
+    --h5-size: 14px;
+    --h5-line-height: 20px;
+    --h6-size: 12px;
+    --h6-line-height: 20px;
+    --heading-spacing: 0.01em;
+    --heading-formatting-size: 0.6em;
+
+    /* Inline Title */
+    --inline-title-size: 1.3rem;
+    --inline-title-padding: 4px 8px;
+    --inline-title-radius: 6px;
+
+    /* Inline Code */
+    --inline-code-bg: #575757;
+    --inline-code-text: #ffffff;
+    --inline-code-letter-spacing: 0.045em;
+
+    /* Code Block */
+    --codeblock-font-family: var(--font-monospace-theme);
+    --codeblock-font-size: 0.95em;
+    --codeblock-line-height: 1.8em;
+    --codeblock-letter-spacing: 0.019em;
+    --codeblock-bg: #2b2b2b;
+    --codeblock-text: #a9b7c6;
+    --codeblock-border: #3c3f41;
+    --codeblock-padding: 1em;
+    --codeblock-radius: 6px;
+    --codeblock-tab-size: 4;
+    --codeblock-gutter-width: 3em;
+    --codeblock-gutter-padding-right: 1em;
+    --codeblock-line-padding-left: 4.5em;
+
+    /* Syntax Highlighting (Darcula) */
+    --syntax-keyword: #cc7832;
+    --syntax-string: #6a8759;
+    --syntax-number: #6897bb;
+    --syntax-function: #d4b01d;
+    --syntax-variable: #d4b01d;
+    --syntax-constant: #9876aa;
+    --syntax-class: #b8ccff;
+    --syntax-property: #9876aa;
+    --syntax-tag: #e8bf6a;
+    --syntax-attribute: #bababa;
+    --syntax-operator: #a9b7c6;
+    --syntax-comment: #808080;
+    --syntax-builtin: #ff9e59;
+    --syntax-meta: #bbb529;
+    --syntax-error: #ff6b68;
+    --syntax-selector: #1d8ed4;
+
+    /* Spacing */
+    --spacing-xs: 1px;
+    --spacing-s: 4px;
+    --spacing-m: 8px;
+    --spacing-l: 16px;
+    --spacing-xl: 20px;
+    --spacing-xxl: 23px;
+
+    /* Border Radius */
+    --radius-s: 4px;
+    --radius-m: 6px;
+    --radius-l: 12px;
+    --radius-round: 50%;
+
+    /* Table */
+    --table-cell-padding: 12px 16px;
+    --table-cell-line-height: 1.8;
+
+    /* Navigation */
+    --nav-font-size: 0.83rem;
+    --nav-font-weight: 300;
+    --nav-folder-weight: 600;
+    --nav-active-weight: 600;
+    --nav-letter-spacing: 0.04em;
+    --nav-line-height: 1.2;
+
+    /* Sidebar */
+    --sidebar-bg: #2e3235;
+    --sidebar-text: #e0e0e0;
+    --sidebar-icon-color: #f9f9f9;
+    --sidebar-active-bg: var(--color-accent);
+    --sidebar-active-text: #f9f9f9;
+
+    /* UI */
+    --cursor: pointer;
+    --editor-line-margin-left: 2rem;
+    --cursor-border-width: 1px;
+    --cursor-z-index: 9999;
+    --ribbon-icon-color: #a5a5a5;
+    --side-dock-icon-color: #cccccc;
+    --line-number-color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* ============================================================================
+   THEME PALETTES
+============================================================================ */
+
+.theme-light {
+    --background-primary: #ffffff;
+    --background-secondary: #fcfcfc;
+    --background-modifier-border: #d0d0d0;
+    --text-normal: #2d2d2d;
+    --text-muted: #8a8a8a;
+    --text-faint: #999999;
+    --nav-item-color: #8a8a8a;
+    --nav-indentation-guide-color: rgba(0, 0, 0, 0.1);
+    --header-formatting-color: #999999;
+    --tab-hover-text: #3a3a3a;
+    --resize-handle-color: #b0b0b0;
+    --stacked-tab-close-border: #d0d0d0;
+}
+
+.theme-dark {
+    --background-primary: #1a1a1a;
+    --background-secondary: #0d0d0d;
+    --background-modifier-border: #3a3a3a;
+    --text-normal: #e0e0e0;
+    --text-muted: #cccccc;
+    --text-faint: #666666;
+    --nav-item-color: #cccccc;
+    --nav-indentation-guide-color: rgba(255, 255, 255, 0.12);
+    --header-formatting-color: #666666;
+    --titlebar-background: #1a1a1a;
+    --tab-container-background: #1a1a1a;
+    --tab-hover-text: #e0e0e0;
+    --resize-handle-color: #c5c5c5;
+    --stacked-tab-close-border: #42414d;
+}
+
+/* ============================================================================
+   BASE STYLES
+============================================================================ */
+
+body {
+    font-size: var(--font-text-size);
+    font-weight: 300;
+    letter-spacing: var(--letter-spacing-body);
+    line-height: var(--line-height-normal);
+    color: var(--text-normal);
+    margin: 0 auto;
+    background-color: var(--background-primary);
+}
+
+body.is-frameless.is-hidden-frameless:not(.in-progress) {
+    padding: 0 0 30px 0;
+}
+
+/* ============================================================================
+   INLINE TITLE
+============================================================================ */
+.cm-s-obsidian span.obsidian-search-match-highlight{
+    background-color: #30AFFFFF;
+    color: white;
+    box-shadow: 0 0 0px 3px #30AFFFFF;
+    mix-blend-mode: unset;
+}
+
+
+.inline-title:not([data-level]) {
+    position: relative;
+    font-family: var(--font-monospace-theme);
+    font-size: var(--inline-title-size);
+    color: var(--color-accent);
+    padding: var(--inline-title-padding);
+    border-radius: var(--inline-title-radius);
+}
+
+.inline-title:not([data-level])::before {
+    content: "File Name : ";
+    color: var(--text-muted);
+}
+
+.inline-title:not([data-level])::after {
+    content: ".md";
+    color: var(--text-muted);
+}
+
+/* ============================================================================
+   TYPOGRAPHY
+============================================================================ */
+
+.markdown-preview-view em,
+.markdown-preview-view i,
+.cm-em,
+em,
+i {
+    color: var(--color-accent);
+    font-style: italic;
+    font-weight: 300;
+}
+
+span.cm-url {
+    color: var(--color-accent);
+}
+
+/* Headings */
+.cm-header {
+    color: var(--text-normal);
+    letter-spacing: var(--heading-spacing);
+}
+
+.cm-formatting-header {
+    color: var(--header-formatting-color);
+    font-size: var(--heading-formatting-size);
+}
+
+.HyperMD-header-1,
+.inline-title h1,
+.HyperMD-list-line .cm-header-1 {
+    font-size: var(--h1-size);
+    line-height: var(--h1-line-height);
+}
+
+.HyperMD-header-2,
+.inline-title h2,
+.HyperMD-list-line .cm-header-2 {
+    font-size: var(--h2-size);
+    line-height: var(--h2-line-height);
+}
+
+.HyperMD-header-3,
+.inline-title h3,
+.HyperMD-list-line .cm-header-3 {
+    font-size: var(--h3-size);
+    line-height: var(--h3-line-height);
+}
+
+.HyperMD-header-4,
+.inline-title h4,
+.HyperMD-list-line .cm-header-4 {
+    font-size: var(--h4-size);
+    line-height: var(--h4-line-height);
+}
+
+.HyperMD-header-5,
+.inline-title h5,
+.HyperMD-list-line .cm-header-5 {
+    font-size: var(--h5-size);
+    line-height: var(--h5-line-height);
+}
+
+.HyperMD-header-6,
+.inline-title h6,
+.HyperMD-list-line .cm-header-6 {
+    font-size: var(--h6-size);
+    line-height: var(--h6-line-height);
+}
+
+/* ============================================================================
+   INLINE CODE
+============================================================================ */
+
+.cm-inline-code,
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting),
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-math,
+.markdown-source-view.mod-cm6 .cm-inline-code,
+.markdown-source-view.mod-cm6 .cm-inline-code.cm-formatting,
+div.cm-line span.cm-inline-code,
+.markdown-preview-section code:not(pre code),
+.markdown-preview-view table code,
+.markdown-source-view.mod-cm6 .cm-table-widget code,
+.markdown-source-view.mod-cm6 .cm-table-widget span.cm-inline-code,
+table code {
+    background-color: var(--inline-code-bg) !important;
+    color: var(--inline-code-text) !important;
+    -webkit-text-fill-color: var(--inline-code-text) !important;
+    border: 3px solid var(--inline-code-bg) !important;
+    font-weight: 300;
+    letter-spacing: var(--inline-code-letter-spacing);
+}
+
+/* ============================================================================
+   CODE BLOCKS
+============================================================================ */
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-source-view.mod-cm6 .cm-scroller {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.HyperMD-codeblock-bg {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.markdown-preview-view code,
+.cm-s-obsidian pre.HyperMD-codeblock {
+    font-family: var(--codeblock-font-family);
+    font-size: var(--codeblock-font-size);
+    line-height: var(--codeblock-line-height);
+    background-color: var(--codeblock-bg);
+    color: var(--codeblock-text);
+    border-radius: var(--codeblock-radius);
+    padding: var(--codeblock-padding);
+    border: 1px solid var(--codeblock-border);
+    overflow-x: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+code:not(.cm-inline-code) {
+    background-color: var(--codeblock-border);
+    color: var(--codeblock-text);
+    border-radius: var(--radius-s);
+    padding: 2px 4px;
+}
+
+.markdown-preview-view pre {
+    padding: var(--codeblock-padding);
+    background-color: var(--codeblock-bg);
+    border-radius: var(--codeblock-radius);
+    border: 1px solid var(--codeblock-border);
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    line-height: var(--codeblock-line-height);
+}
+
+.markdown-preview-view pre code {
+    background-color: transparent;
+    color: var(--codeblock-text);
+    font-family: var(--codeblock-font-family) !important;
+    font-size: var(--codeblock-font-size) !important;
+    line-height: var(--codeblock-line-height) !important;
+    white-space: pre;
+    tab-size: var(--codeblock-tab-size) !important;
+    -moz-tab-size: var(--codeblock-tab-size) !important;
+    letter-spacing: 0 !important;
+    font-variant-ligatures: none !important;
+    text-rendering: optimizeLegibility;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock {
+    font-family: var(--codeblock-font-family) !important;
+    font-size: var(--codeblock-font-size) !important;
+    line-height: var(--codeblock-line-height) !important;
+    letter-spacing: 0 !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    tab-size: var(--codeblock-tab-size) !important;
+    -moz-tab-size: var(--codeblock-tab-size) !important;
+    font-variant-ligatures: none !important;
+    background-color: var(--codeblock-bg);
+    color: var(--codeblock-text);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-begin {
+    border-top-left-radius: var(--codeblock-radius);
+    border-top-right-radius: var(--codeblock-radius);
+    padding-top: 0.5em;
+    counter-reset: block-lines;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock-end {
+    border-bottom-left-radius: var(--codeblock-radius);
+    border-bottom-right-radius: var(--codeblock-radius);
+    padding-bottom: 0.5em;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+    counter-increment: block-lines;
+    position: relative;
+    padding-left: var(--codeblock-line-padding-left) !important;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
+    content: counter(block-lines);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--codeblock-gutter-width);
+    text-align: right;
+    padding-right: var(--codeblock-gutter-padding-right);
+    color: var(--text-muted);
+    font-family: var(--codeblock-font-family);
+    pointer-events: none;
+    height: 100%;
+    border-right: none;
+}
+
+.cm-line.HyperMD-codeblock,
+.cm-line.HyperMD-codeblock span,
+.HyperMD-codeblock-bg,
+.HyperMD-codeblock-bg span {
+    font-family: var(--codeblock-font-family) !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    letter-spacing: 0 !important;
+}
+
+.markdown-source-view .cm-line.HyperMD-codeblock:not(.HyperMD-list-line),
+.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
+    letter-spacing: var(--codeblock-letter-spacing);
+    font-size: var(--codeblock-font-size);
+    background-color: var(--codeblock-bg);
+    color: var(--codeblock-text) !important;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* ============================================================================
+   SYNTAX HIGHLIGHTING
+============================================================================ */
+
+.hljs-keyword, .cm-keyword { color: var(--syntax-keyword); }
+.hljs-string, .cm-string, .cm-string-2 { color: var(--syntax-string); }
+.token.selector, .token.attr-name, .token.string, .token.char, .token.inserted { color: var(--syntax-selector); }
+.hljs-number, .cm-number, .cm-atom { color: var(--syntax-number); }
+.hljs-function, .hljs-title, .cm-def, .cm-variable-2 { color: var(--syntax-function); }
+.hljs-variable, .cm-variable, .cm-parameter { color: var(--syntax-variable); }
+.hljs-constant, .cm-variable-3 { color: var(--syntax-constant); }
+.hljs-class, .hljs-type, .cm-type { color: var(--syntax-class); }
+.hljs-attr, .cm-property { color: var(--syntax-property); }
+.hljs-tag, .cm-tag { color: var(--syntax-tag); }
+.hljs-attribute, .cm-attribute { color: var(--syntax-attribute); }
+.hljs-operator, .cm-operator { color: var(--syntax-operator); }
+.hljs-comment, .cm-comment { color: var(--syntax-comment); font-style: italic; }
+.hljs-built_in, .cm-builtin { color: var(--syntax-builtin); }
+.hljs-meta, .cm-meta { color: var(--syntax-meta); }
+.cm-error { color: var(--syntax-error); text-decoration: underline; }
+
+/* ============================================================================
+   LISTS & TASKS
+============================================================================ */
+
+span.cm-formatting-list,
+.markdown-preview-view ol > li::marker,
+.markdown-preview-view ul > li::marker {
+    color: var(--color-accent);
+    font-size: 1em;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.list-bullet::after {
+    background-color: var(--color-accent);
+    color: var(--color-accent);
+    padding: var(--spacing-xs);
+    margin-right: 10px;
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+    filter: none;
+}
+
+/* ============================================================================
+   TABLES
+============================================================================ */
+
+.markdown-preview-view table td,
+.markdown-preview-view table th,
+table td,
+table th {
+    padding: var(--table-cell-padding) !important;
+    line-height: var(--table-cell-line-height) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget-cell {
+    padding: var(--table-cell-padding) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content table.cm-table-widget tr > td,
+.markdown-source-view.mod-cm6 .cm-content table.cm-table-widget tr > th {
+    padding: var(--table-cell-padding) !important;
+}
+
+.bases-table-container.node-insert-event {
+    margin-left: 3rem;
+}
+
+/* ============================================================================
+   TAB HEADER
+============================================================================ */
+
+.workspace-split .workspace-tabs .workspace-tab-header-container {
+    border-bottom: none;
+    padding: 0;
+    gap: 0;
+}
+
+.workspace-split .workspace-tabs:not .workspace-tab-header-container-inner {
+    gap: 0;
+    align-items: flex-end;
+    padding: 0 var(--spacing-s);
+}
+
+.mod-right-split .workspace-tab-header-container .workspace-tab-header-container-inner {
+    padding: 0;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    transition: color 0.15s ease;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active:hover {
+    background-color: transparent;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header::before,
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header::after {
+    display: none;
+    box-shadow: none;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-s);
+    padding: var(--spacing-m) var(--spacing-l);
+    font-size: var(--nav-font-size);
+    font-weight: var(--nav-font-weight);
+    letter-spacing: var(--nav-letter-spacing);
+    color: var(--text-faint);
+    width: auto;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header-inner::after {
+    background-color: unset;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header-inner-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+    display: block;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header[data-type="empty"] .workspace-tab-header-inner .workspace-tab-header-inner-icon {
+    display: none;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header-inner-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    border-radius: var(--radius-round);
+    opacity: 0;
+    color: var(--background-primary);
+    background-color: var(--color-accent);
+    transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+    margin-left: 5px;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header-inner-close-button:hover {
+    color: var(--color-accent);
+    background-color: var(--background-primary);
+    border: 1px solid var(--color-accent);
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+    opacity: 1;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    background-color: unset;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+    color: var(--color-accent);
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-icon {
+    color: var(--color-accent);
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
+    font-weight: 400;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: var(--color-accent) !important;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--color-accent);
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+    opacity: 1;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-container .workspace-tab-header.is-active::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: var(--spacing-l);
+    right: var(--spacing-l);
+    height: 2px;
+    background-color: var(--color-accent);
+    border-radius: 2px 2px 0 0;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-new-tab,
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-tab-list {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-s);
+    color: var(--text-muted);
+    opacity: 0.4;
+    transition: opacity 0.15s ease;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-new-tab:hover,
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-tab-list:hover {
+    color: var(--text-normal);
+    background-color: transparent;
+    opacity: 1;
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-header-spacer {
+    flex: 1;
+}
+
+body.is-focused .mod-active .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+    color: var(--color-accent);
+}
+
+.workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner .workspace-tab-header-inner-icon,
+.workspace-tab-header-container .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    background-color: unset;
+    color: var(--color-accent);
+}
+
+.mod-left-split .workspace-tab-header-container .workspace-tab-header:hover,
+.mod-left-split .workspace-tab-header-container .workspace-tab-header.has-active-menu,
+.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active:hover,
+.mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active {
+    font-size: var(--nav-font-size);
+    color: var(--color-accent);
+    background-color: unset;
+    cursor: pointer;
+}
+
+/* ============================================================================
+   NAVIGATION
+============================================================================ */
+
+.nav-file-title,
+.nav-folder-title {
+    color: var(--nav-item-color);
+    white-space: normal;
+    font-size: var(--nav-font-size);
+    font-weight: var(--nav-font-weight);
+    letter-spacing: var(--nav-letter-spacing);
+    line-height: var(--nav-line-height);
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+    background-color: var(--color-accent) !important;
+    color: var(--sidebar-active-text) !important;
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+    background-color: var(--sidebar-active-bg) !important;
+    color: var(--sidebar-active-text) !important;
+}
+
+.nav-files-container.node-insert-event {
+    border-radius: var(--radius-l);
+}
+
+.tree-item.nav-folder .tree-item-self.nav-folder-title.is-clickable .tree-item-inner.nav-folder-title-content {
+    font-weight: var(--nav-folder-weight);
+}
+
+.tree-item-children {
+    border-inline-start: 1px solid var(--nav-indentation-guide-color);
+    padding-inline-start: 1px;
+}
+
+.workspace-leaf-content body:not(.is-grabbing) .tree-item-self.is-clickable:hover,
+body:not(.is-grabbing) .nav-folder.tree-item .tree-item-self.is-clickable:hover {
+    color: var(--sidebar-text);
+    border: 1px solid var(--color-accent);
+    cursor: var(--cursor);
+}
+
+.workspace-leaf-content .tree-item-self.nav-file:hover,
+.nav-folder-children .tree-item-self.nav-file:hover {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-icon-color);
+    border-radius: var(--radius-m);
+    position: relative;
+    border: 1px solid var(--color-accent);
+    cursor: var(--cursor);
+}
+
+.workspace-leaf-content .tree-item.nav-folder.is-active,
+.workspace-leaf-content .tree-item-self.nav-file-title.is-active,
+.workspace-leaf-content .tree-item.nav-file.is-active {
+    background-color: var(--sidebar-active-bg);
+    color: var(--sidebar-active-text);
+    border-radius: var(--radius-m);
+    position: relative;
+}
+
+body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
+    color: var(--sidebar-active-text);
+    background-color: var(--sidebar-active-bg);
+    font-weight: var(--nav-active-weight);
+    border: 1px solid var(--color-accent);
+    box-shadow: none;
+}
+
+.collapse-icon svg.svg-icon {
+    color: var(--sidebar-icon-color);
+}
+
+/* ============================================================================
+   NAV BUTTONS
+============================================================================ */
+
+.nav-buttons-container .clickable-icon {
+    color: var(--side-dock-icon-color);
+}
+
+.nav-buttons-container .clickable-icon:hover {
+    color: var(--color-accent);
+    cursor: var(--cursor);
+}
+
+.clickable-icon.nav-action-button {
+    color: var(--sidebar-icon-color);
+    cursor: var(--cursor);
+}
+
+.clickable-icon.nav-action-button:hover {
+    cursor: var(--cursor);
+}
+
+/* ============================================================================
+   SIDEBAR TOGGLE
+============================================================================ */
+
+.sidebar-toggle-button {
+    opacity: 0.35;
+    transition: opacity 0.15s ease;
+}
+
+.sidebar-toggle-button:hover {
+    opacity: 1;
+    background-color: transparent;
+}
+
+/* ============================================================================
+   EDITOR
+============================================================================ */
+
+.cm-line,
+.markdown-preview-view {
+    line-height: var(--line-height-normal) !important;
+    margin-left: var(--editor-line-margin-left);
+}
+
+.markdown-source-view.mod-cm6 .cm-editor .cm-scroller {
+    background-color: var(--background-primary);
+}
+
+.cm-lineNumbers {
+    color: var(--line-number-color);
+}
+
+.cm-lineNumbers .cm-gutterElement:hover {
+    color: var(--color-accent);
+    cursor: var(--cursor);
+}
+
+.cm-lineNumbers .cm-gutterElement.cm-active {
+    font-weight: bold !important;
+    color: var(--color-accent);
+    display: flex;
+    padding-left: 25px;
+}
+
+.cm-lineNumbers .cm-gutterElement.cm-active::before {
+    content: "⇾";
+    position: absolute;
+    left: 20px;
+    font-size: 1.3rem;
+    color: var(--color-accent);
+}
+
+table .cm-scroller {
+    margin-left: -20px;
+}
+
+table .cm-active.cm-line {
+    padding-left: 20px;
+    position: relative;
+}
+.markdown-source-view.mod-cm6 .cm-line {
+    position: relative;
+    padding-left: 20px;
+}
+
+table .cm-active.cm-line::before {
+    content: "⇾";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--color-accent);
+}
+
+.markdown-source-view.mod-cm6 .cm-cursorLayer {
+    z-index: var(--cursor-z-index) !important;
+    animation: none !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-cursor,
+.markdown-source-view.mod-cm6 .cm-cursor-primary,
+.markdown-source-view.mod-cm6 .cm-dropCursor {
+    border-left-color: var(--color-accent) !important;
+    border-left-width: var(--cursor-border-width) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    mix-blend-mode: normal !important;
+}
+
+
+
+.markdown-source-view.mod-cm6 .cm-content {
+    caret-color: var(--color-accent) !important;
+}
+
+
+.cm-selectionBackground,
+.CodeMirror-selected {
+    background: var(--color-accent) !important;
+    background-color: var(--color-accent) !important;
+}
+
+/* ============================================================================
+   RESIZE HANDLES
+============================================================================ */
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    bottom: 50%;
+    height: 10px;
+    width: 3px;
+    background-color: var(--resize-handle-color);
+    padding: var(--spacing-m);
+    right: -20px;
+    border-radius: var(--radius-round);
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover {
+    background-color: var(--color-accent);
+}
+
+/* ============================================================================
+   RIBBON & STATUS BAR
+============================================================================ */
+
+.workspace-ribbon {
+    background-color: transparent;
+    border: none;
+}
+
+.workspace-ribbon.mod-left::before {
+    border: none;
+}
+
+.side-dock-actions .clickable-icon {
+    color: var(--ribbon-icon-color);
+}
+
+.side-dock-actions .clickable-icon:hover {
+    color: var(--color-accent);
+    background-color: transparent;
+}
+
+.status-bar {
+    background-color: transparent;
+    border: none;
+}
+
+/* ============================================================================
+   SCROLLBAR
+============================================================================ */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:  var(--color-accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-accent);
+}
+
+/* Hide scrollbar inside code blocks only */
+.markdown-preview-view pre::-webkit-scrollbar,
+.HyperMD-codeblock-bg::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============================================================================
+   LAYOUT CONTAINERS
+============================================================================ */
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+    padding-left: var(--spacing-xxl);
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-close-button {
+    border: 1px solid var(--stacked-tab-close-border);
+    border-radius: var(--radius-round);
+    margin-bottom: var(--spacing-l);
+    opacity: 1;
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-close-button:hover {
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    background: transparent;
+}
+
+/* ============================================================================
+   SIDEBAR CONTEXT
+============================================================================ */
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--sidebar-text) !important;
+    border-radius: var(--radius-l);
+    margin-top: var(--spacing-s);
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-name {
+    color: var(--sidebar-text);
+}
+
+.workspace-split .workspace-tabs:not(.mod-top-left-space) .workspace-tab-container .workspace-leaf .workspace-leaf-content {
+    border-radius: var(--radius-l);
+    border: 1px solid var(--background-modifier-border);
+}
+
+.workspace-tabs.mod-top.mod-top-left-space .workspace-tab-container .workspace-leaf .workspace-leaf-content {
+    background-color: var(--sidebar-bg);
+    border-radius: var(--radius-l);
+    border: 1px solid var(--background-modifier-border);
+}
+
+.workspace-drawer-vault-actions .clickable-icon {
+    color: var(--sidebar-text);
+}
+
+.workspace-drawer-vault-actions .clickable-icon:hover {
+    background-color: var(--color-accent);
+    color: #f1f1f1;
+}
+
+/* ============================================================================
+   MOBILE
+============================================================================ */
+
+body.is-mobile.theme-dark,
+body.is-mobile.theme-light {
+    --mobile-sidebar-background: var(--sidebar-bg) !important;
+}
+
+.is-mobile .workspace-drawer,
+.is-mobile .workspace-drawer.mod-left,
+.is-mobile .workspace-drawer.mod-right {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--sidebar-text) !important;
+    border: none !important;
+    border-radius: var(--radius-l) !important;
+    box-shadow: none !important;
+}
+
+.is-mobile .workspace-drawer .workspace-sidedock-vault-profile {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--sidebar-text) !important;
+}
+
+.is-mobile .workspace-drawer-active-tab-container {
+    border-radius: var(--radius-l) !important;
+}
+
+.is-mobile .workspace-drawer-active-tab-container .workspace-drawer-active-tab-header {
+    background-color: var(--sidebar-bg) !important;
+}
+
+.is-mobile .workspace-drawer-active-tab-container .workspace-drawer-active-tab-header .workspace-drawer-active-tab-title {
+    background-color: var(--sidebar-bg) !important;
+    color: var(--sidebar-text) !important;
+    border: none !important;
+    border-radius: var(--radius-m) !important;
+    padding: var(--spacing-s) var(--spacing-m) !important;
+    -webkit-text-fill-color: var(--sidebar-text) !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+/* ============================================================================
+   FOCUS STATE
+============================================================================ */
+
+body.is-focused .sidebar-toggle-button,
+body.is-focused .workspace-tabs.mod-top {
+    background-color: transparent;
+    border: none;
+}
+
+body.is-focused .workspace-tab-header.is-active {
+    background-color: transparent;
+}
+
+body.is-focused .workspace-leaf.mod-active .view-header {
+    background-color: transparent;
+}
+
+body.theme-light.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+body.theme-dark.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+    color: var(--text-normal);
+    font-weight: 400;
+}
+
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+    background-color: transparent !important;
+}
+
+/* ============================================================================
+   THEME BACKGROUNDS
+============================================================================ */
+
+.theme-light .workspace-tab-header-container {
+    background-color: var(--background-primary);
+}
+
+.theme-dark .workspace-tab-container,
+.theme-dark .workspace-split,
+.theme-dark .view-header,
+.theme-dark .workspace-tab-header-container {
+    background-color: var(--background-primary);
+}
+
+.theme-dark .workspace.is-left-sidedock-open .workspace-ribbon,
+.theme-dark .workspace-ribbon.mod-left::before {
+    background-color: var(--background-primary);
+}
+
+/* ============================================================================
+   COLLAPSED RIBBON
+============================================================================ */
+
+.workspace-ribbon.mod-left.is-collapsed {
+    border-right-color: transparent;
+}

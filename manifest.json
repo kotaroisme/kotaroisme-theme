@@ -1,8 +1,8 @@
 {
 	"id": "kotaroisme-theme",
 	"name": "Kotaroisme Theme",
-	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
+	"version": "1.0.1",
+	"minAppVersion": "1.0.1",
 	"description": "A refined, typography-focused theme with customizable font settings. Earnest, reflective, purpose-driven aesthetics.",
 	"author": "Kotaro",
 	"authorUrl": "https://github.com/kotaroisme",

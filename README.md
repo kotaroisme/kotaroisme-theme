@@ -64,7 +64,7 @@ curl -fsSL https://raw.githubusercontent.com/kotaroisme/kotaroisme-theme/main/in
 With specific vault path:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kotaroisme/kotaroisme-theme/main/install.sh | bash -s -- "/path/to/your/vault"
+curl -fsSL https://raw.githubusercontent.com/kotaroisme/kotaroisme-theme/main/install.sh | bash -s -- "path/to/your/vault
 ```
 
 **Windows (PowerShell):**
