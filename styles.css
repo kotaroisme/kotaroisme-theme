@@ -283,6 +283,11 @@ span.cm-url {
     line-height: var(--h6-line-height);
 }
 
+.HyperMD-quote.cm-line{
+    text-indent: -17px;
+    padding-inline-start: 17px;
+}
+
 /* ============================================================================
    INLINE CODE
 ============================================================================ */
@@ -807,8 +812,8 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 .cm-line,
 .markdown-preview-view {
     line-height: var(--line-height-normal) !important;
-    margin-left: var(--editor-line-margin-left);
 }
+
 
 .markdown-source-view.mod-cm6 .cm-editor .cm-scroller {
     background-color: var(--background-primary);
